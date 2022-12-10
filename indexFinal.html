@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="stylesheetFinal.css"/>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Schreiben Sie <br /> uns eine <br /> Nachricht</h1>
+            <hr />
+        </header>
+
+        <main>
+            <form class="outside-flex-wrapper">
+
+                <div class="left">
+                    <label for="interest"> Ich interessiere mich für ...</label>
+                    <textarea id="interest"></textarea>     
+                    <div class="required-field"><span class="asterisk"> * </span> Required field </div>
+                </div>
+
+                <div class="vertical"></div>
+
+                <div class="right">
+
+                    <fieldset>
+                        <legend> Anrede </legend>
+                        <label> <input type="radio" name="Anrede" value="Frau"> Frau </label>
+                        <label> <input type="radio" name="Anrede" value="Herr"> Herr </label>
+                        <label> <input type="radio" name="Anrede" value="Keine-Angabe"> Keine Angabe </label>
+                    </fieldset>
+            
+                    <label for="name">Ihr Name</label>
+                    <input type="text" id="name" name="name"/>
+                    <div class="required-field"><span class="asterisk"> * </span> Required field </div>
+     
+                    <label for="email"> Ihr E-Mail-Adresse </label>
+                    <input type="email" id="email" name="email"/>
+                    <div class="required-field"><span class="asterisk"> * </span> Required field </div>
+
+                    <div class="send-button-wrapper">
+                        <button type="submit" name="send-button" class="send-button" onclick= "inputValue()"> Send </button>
+                    </div>
+
+                    <script src="scriptFinal.js"></script>
+
+                </div>
+
+            </form> 
+        </main>
+    </body>
+</html>
