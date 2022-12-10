@@ -24,7 +24,6 @@ h1 {
 
 hr {
     margin: -10px 0 40px 0;
-    
     height: 0.3px;
     width: 45px;
     
@@ -45,8 +44,7 @@ hr {
 
 textarea {
     height: 250px;
-    width: 100%;
-        
+    width: 100%;  
     background-color: white;
     border: none;
     outline: none;
