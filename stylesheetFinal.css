@@ -9,9 +9,6 @@ body,
 main {
     height: 100%;
     margin: 0;
-    /* height: 100%;
-    padding: 0;
-    border: 0; */
 }
 
 @font-face {
@@ -19,87 +16,74 @@ main {
     src: url(Explogos\ -\ Demo.ttf);
 }
 
-.outside-flex-wrapper {
-    margin-top: 40px;
-    margin: 40px auto 0;
+.outside-wrapper {
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+
+.flex-wrapper {
     display: flex;
-    max-width: 1050px;
-    gap: calc(40px + 2vw);
-    padding: 0px 20px 0px 20px;    
+    gap: 80px;
+    padding: 0px 20px;    
 }
 
 .left {
-    /* width: 420px; */
-    /* width: 30.7vw; */
-    width: calc(300px + 8.7vw);
+    width: 100%;
 }
 
 header {
-    /* position: relative;
-    top: 0; */
-    /* width: 33vw; */
-    /* margin: 70px auto 30px 140px; */
+    display: block;
     margin: 0 auto 30px -50px;
 }
 
 h1 {
     color: rgb(173, 18, 102);
     font-family: 'Explogos', 'Gill Sans', 'Gill Sans MT', sans-serif;
-    /* font-size: 2.3vw; */
     font-weight: 500;
     letter-spacing: 8px;
-    /* letter-spacing: 0.59vw; */
     line-height: 1.3em;
-    /* line-height: 3.3vw; */
     text-transform: uppercase;   
 }
 
 hr {
-    margin: -10px 0 40px 0;
-    
     height: 0.3px;
-    /* height: 0.04vh; */
     width: 45px;
-    /* width: 8%; */
+
+    margin: -10px 0 40px 0;
     
     background-color:rgb(173, 18, 102);   
 }
 
 textarea {
     height: 250px;
-    /* height: 32.6vh; */
     width: 100%;
         
     background-color: white;
     border: none;
     outline: none;
-    /* padding: 0; */
+    padding: 0;
     
     font-size: 1em;
     overflow: hidden;
 }
 
-.vertical { 
-    /* margin: 0 10px; */
-    margin: 210px 0 auto 0;
-    /* margin: 27.3vh 0.73vw auto 0.73vw; */
-    
+.vertical {
     height: 310px;
-    /* height: 41.6vh; */
     width: 0;
+
+    margin: 210px 0 auto 0;
     
     border-left: 1.5px solid rgba(0, 0, 0, 0.1);  
 }
 
 .right {
-    /* width: 420px; */
-    /* align-self: flex-end; */
-    /* width: 30.7vw; */
-    width: calc(300px + 8.7vw);
+    width: 100%;
+
     margin-top: 200px;
     margin-right: 0;
-    /* margin-top: 26.95vh; */
-    /* margin-top: calc(57px + 11.2vw); */
+
 }
 
 fieldset {
@@ -108,7 +92,7 @@ fieldset {
     border: none;
 }
 
-label[for="interest"],
+label[for="message"],
 legend {
     display: block;
     padding-bottom: 6px;
@@ -124,7 +108,6 @@ input[type="radio"] {
     vertical-align: text-bottom;
 
     margin-right: 10px;
-    /* margin-right: calc(-25px + 2.5vw); */
 
     height: 1.3em;
     width: 1.3em;
@@ -134,8 +117,6 @@ input[type="radio"] {
 
 input[type="radio"]::after {
     position: absolute;
-
-    vertical-align: text-bottom;
 
     content: "";
 
@@ -153,10 +134,6 @@ input[type="radio"]:checked::after {
     background-color: rgb(173, 18, 102);
     border-color: rgba(243, 235, 235, 1);
 }
-
-/* fieldset label:not(:last-of-type) {
-    margin-right: min(40px, calc(-120px + 12vw));
-} */
 
 label[for="name"],
 label[for="email"] {
@@ -185,11 +162,12 @@ label[for="email"] {
 input[id="name"],
 input[id="email"] {
     display: block;
-    flex-shrink: 1;
     margin-bottom: 5px;
     
     height: 50px;
     width: 100%;
+
+    padding: 0;
     
     background-color: white;
     border: none;
@@ -248,20 +226,17 @@ input[id="email"] {
 }
 
 
-@media screen and (max-width: 1000px) {
-
-    header {
-        margin-left: 0;
+@media screen and (max-width: 1150px) {
+    .outside-wrapper {
+        padding: 0 15px 0 10px;
     }
-    .outside-flex-wrapper {
+
+    .flex-wrapper {
         flex-direction: column;
-        top: 2%;
-        left: calc(50% - 195px);
-        max-width: 390px;
-        /* gap: calc(40px + 2vh); */
-        /* padding-bottom: 30px; */
-        padding: 0 0 70px 0;
-        /* margin: auto calc(20px + 17.5vw) auto; */
+        
+        align-items: center;
+
+        padding: 0;
     }
 
     .vertical {
@@ -270,24 +245,37 @@ input[id="email"] {
 
     .left,
     .right {
-        /* max-width: calc(300px + 8.7vw); */
-        position: relative;
-        max-width: 390px;
+        max-width: 400px;
         margin-top: 0;
-        /* margin-bottom: 30px; */
     }
 
-    textarea {
-        width: max(385px, calc(300px + 8.7vw));
+    header {
+        margin-left: 0;
+        padding-top: 60px;
     }
 
-    fieldset {
-        min-width: 385px;
-    }
-
+    textarea,
+    fieldset,
     input[id="name"],
     input[id="email"] {
-        min-width: max(385px, calc(300px + 8.7vw));
+        width: 100%;
+    }
+
+    input[type="radio"] {  
+        vertical-align: middle;
+        height: 2.5em;
+        width: 2.5em;
+        margin-right: 0;
+    }
+    
+    input[type="radio"]::after {
+        height: 1.2em;
+        width: 1.2em;
+        
+    }
+
+    fieldset label {
+        margin-right: 30px;
     }
 
     label:last-of-type {
@@ -296,35 +284,17 @@ input[id="email"] {
 
     .send-button {
         position: relative;
-        /* left: calc(50% - 75px); */
         left: 0;
         margin: 0;
     }
 }
 
 @media screen and (max-width: 500px) {
-    textarea {
-        width: 77.8vw;
-    }
-
-    /* fieldset {
-        min-width: none;
-        width: 77.8vw;
-        background-color: blue;
-    } */
-
-    input[type="radio"] {       
-        margin-right: calc(2.5vw);
+    h1 {
+        letter-spacing: 1.6vw;
     }
 
     fieldset label:not(:last-of-type) {
-        margin-right: min(40px, calc(-110px + 30vw));
-    }
-
-    input[id="name"],
-    input[id="email"] {
-        min-width: none;
-        width: 77.8vw;
-        background-color: green;
+        margin-right: min(30px, calc(-50px + 16vw));
     }
 }
