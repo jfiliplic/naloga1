@@ -18,7 +18,7 @@ main {
 
 .outside-wrapper {
     height: 100%;
-    max-width: 1000px;
+    max-width: 1000px;  
     margin: 0 auto;
     padding: 60px 80px;
 }
@@ -42,6 +42,7 @@ h1 {
     color: rgb(173, 18, 102);
     font-family: 'Explogos', 'Gill Sans', 'Gill Sans MT', sans-serif;
     font-weight: 500;
+    font-weight: bold;
     letter-spacing: 8px;
     line-height: 1.3em;
     text-transform: uppercase;   

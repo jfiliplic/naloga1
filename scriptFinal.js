@@ -1,6 +1,3 @@
-// radiobutton = document.getElementById("no-gender");
-// radiobutton.checked = true;
-
 const formSubmit = document.querySelector('form');
 formSubmit.addEventListener('submit', event => {
   event.preventDefault();
